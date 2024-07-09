@@ -176,5 +176,8 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.38.1"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
