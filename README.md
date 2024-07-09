@@ -2,32 +2,6 @@
 
 A lighter version of redux
 
-## Installation
-
-```sh
-npm install @marqroldan/react-scoped-context
-```
-
-## Usage
-
-
-```js
-import { multiply } from '@marqroldan/react-scoped-context';
-
-// ...
-
-const result = await multiply(3, 7);
-```
-
-
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
-
-## License
-
-MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)
+# Sources
+1. https://medium.com/async/how-useselector-can-trigger-an-update-only-when-we-want-it-to-a8d92306f559
+2. https://gist.github.com/computerjazz/e23ea6dbfbdfb69c5f3a09b265a334e6
