@@ -1,6 +1,6 @@
 {
   "name": "@marqroldan/react-scoped-context",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A lighter version of redux",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.cjs",
@@ -56,7 +56,7 @@
   },
   "homepage": "https://github.com/marqroldan/react-scoped-context#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^17.0.2",
@@ -176,8 +176,5 @@
   "create-react-native-library": {
     "type": "library",
     "version": "0.38.1"
-  },
-  "publishConfig": {
-    "access": "public"
   }
 }
