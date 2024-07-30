@@ -1,8 +1,8 @@
-import React from 'react';
+import {createContext as _createContext} from 'react';
 import type {DataContext, DefaultState} from './types';
 
 export function createContext<T = DefaultState>() {
-  return React.createContext<DataContext<T>>({
+  return _createContext<DataContext<T>>({
     getState: () => ({} as T),
     subscribe: () => () => {},
   });
