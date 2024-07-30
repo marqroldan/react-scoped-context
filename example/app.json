@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "example",
-    "slug": "example",
+    "name": "react-native-overlay-example",
+    "slug": "react-native-overlay-example",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -13,14 +13,14 @@
     },
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "marqroldan.reactscopedcontext.example"
+      "bundleIdentifier": "expo.modules.marqroldanreactnativeoverlay.example"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "marqroldan.reactscopedcontext.example"
+      "package": "expo.modules.marqroldanreactnativeoverlay.example"
     },
     "web": {
       "favicon": "./assets/favicon.png"

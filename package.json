@@ -2,48 +2,23 @@
   "name": "@marqroldan/react-scoped-context",
   "version": "0.1.2",
   "description": "A lighter version of redux",
-  "source": "./src/index.tsx",
-  "main": "./lib/commonjs/index.cjs",
-  "module": "./lib/module/index.mjs",
-  "types": "./lib/typescript/src/index.d.ts",
-  "exports": {
-    ".": {
-      "types": "./lib/typescript/src/index.d.ts",
-      "import": "./lib/module/index.mjs",
-      "require": "./lib/commonjs/index.cjs"
-    }
-  },
-  "files": [
-    "src",
-    "lib",
-    "android",
-    "ios",
-    "cpp",
-    "*.podspec",
-    "!ios/build",
-    "!android/build",
-    "!android/gradle",
-    "!android/gradlew",
-    "!android/gradlew.bat",
-    "!android/local.properties",
-    "!**/__tests__",
-    "!**/__fixtures__",
-    "!**/__mocks__",
-    "!**/.*"
-  ],
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "example": "yarn workspace @marqroldan/react-scoped-context-example",
-    "test": "jest",
-    "typecheck": "tsc --noEmit",
-    "lint": "eslint \"**/*.{js,ts,tsx}\"",
-    "clean": "del-cli lib",
-    "prepare": "bob build",
-    "release": "release-it"
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "lint": "expo-module lint",
+    "test": "expo-module test",
+    "prepareOnly": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module",
+    "open:ios": "xed example/ios",
+    "open:android": "open -a \"Android Studio\" example/android"
   },
   "keywords": [
     "react-native",
-    "ios",
-    "android"
+    "expo",
+    "@marqroldan/react-scoped-context"
   ],
   "repository": {
     "type": "git",
@@ -51,130 +26,20 @@
   },
   "author": "Marq Roldan <hcmlroldan@gmail.com> (https://github.com/marqroldan)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/marqroldan/react-scoped-context/issues"
-  },
   "homepage": "https://github.com/marqroldan/react-scoped-context#readme",
-  "publishConfig": {
-    "access": "public"
-  },
   "devDependencies": {
-    "@commitlint/config-conventional": "^17.0.2",
-    "@evilmartians/lefthook": "^1.5.0",
-    "@react-native/eslint-config": "^0.73.1",
-    "@release-it/conventional-changelog": "^5.0.0",
-    "@types/jest": "^29.5.5",
-    "@types/react": "^18.2.44",
-    "commitlint": "^17.0.2",
-    "del-cli": "^5.1.0",
-    "eslint": "^8.51.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.1",
-    "jest": "^29.7.0",
-    "prettier": "^3.0.3",
-    "react": "18.2.0",
-    "react-native": "0.74.3",
-    "react-native-builder-bob": "^0.25.0",
-    "release-it": "^15.0.0",
-    "typescript": "^5.2.2"
-  },
-  "resolutions": {
-    "@types/react": "^18.2.44"
+    "@types/react": "^18.0.25",
+    "expo-module-scripts": "^3.5.2",
+    "expo-modules-core": "^1.12.19",
+    "react": "^18.2.0",
+    "react-native": "^0.74.3",
+    "react-native-reanimated": "^3.14.0"
   },
   "peerDependencies": {
+    "expo": "*",
     "react": "*",
-    "react-native": "*"
+    "react-native": "*",
+    "react-native-reanimated": "*"
   },
-  "workspaces": [
-    "example"
-  ],
-  "packageManager": "yarn@3.6.1",
-  "jest": {
-    "preset": "react-native",
-    "modulePathIgnorePatterns": [
-      "<rootDir>/example/node_modules",
-      "<rootDir>/lib/"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ]
-  },
-  "release-it": {
-    "git": {
-      "commitMessage": "chore: release ${version}",
-      "tagName": "v${version}"
-    },
-    "npm": {
-      "publish": true
-    },
-    "github": {
-      "release": true
-    },
-    "plugins": {
-      "@release-it/conventional-changelog": {
-        "preset": "angular"
-      }
-    }
-  },
-  "eslintConfig": {
-    "root": true,
-    "extends": [
-      "@react-native",
-      "prettier"
-    ],
-    "rules": {
-      "react/react-in-jsx-scope": "off",
-      "prettier/prettier": [
-        "error",
-        {
-          "quoteProps": "consistent",
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": [
-    "node_modules/",
-    "lib/"
-  ],
-  "prettier": {
-    "quoteProps": "consistent",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
-  },
-  "react-native-builder-bob": {
-    "source": "src",
-    "output": "lib",
-    "targets": [
-      [
-        "commonjs",
-        {
-          "esm": true
-        }
-      ],
-      [
-        "module",
-        {
-          "esm": true
-        }
-      ],
-      [
-        "typescript",
-        {
-          "project": "tsconfig.build.json"
-        }
-      ]
-    ]
-  },
-  "create-react-native-library": {
-    "type": "library",
-    "version": "0.38.1"
-  }
+  "private": false
 }
